@@ -40,7 +40,6 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileMenuOpen, s
                     </div>
                 <div>
                     <h1 className="font-semibold text-lg leading-tight tracking-tight text-slate-900">Film ROI Predictor</h1>
-                    <p className="text-[11px] text-slate-500 font-medium mt-0.5">Exec Console v2.0</p>
                 </div>
             </div>
             

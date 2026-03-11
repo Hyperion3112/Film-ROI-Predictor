@@ -58,11 +58,7 @@ export default function Dashboard() {
                                 </p>
                             </div>
                         </div>
-                        <div className="hidden lg:flex gap-3">
-                            <div className="px-3 py-1.5 bg-white rounded-md border border-slate-200 shadow-sm text-xs font-semibold text-slate-600 flex items-center gap-1.5">
-                                <Users className="w-3.5 h-3.5 text-blue-500" /> AI Insights Active
-                            </div>
-                        </div>
+
                     </div>
                 </header>
 

@@ -65,8 +65,8 @@ export default function Dashboard() {
                 {currentTab === 'overview' && (
                     <div className="space-y-6">
                         {/* KPI Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="glass-card p-5 rounded-lg flex flex-col justify-between h-32">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up">
+                            <div className="glass-card p-5 rounded-lg flex flex-col justify-between h-32 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                                 <div className="flex items-center gap-2 text-slate-500">
                                     <Clapperboard className="w-4 h-4" />
                                     <h3 className="text-xs font-semibold uppercase tracking-wider">Total Tracking</h3>
@@ -74,7 +74,7 @@ export default function Dashboard() {
                                 <p className="text-3xl font-bold text-slate-900">{marketOverview.totalFilms}</p>
                             </div>
 
-                            <div className="glass-card p-5 rounded-lg flex flex-col justify-between h-32">
+                            <div className="glass-card p-5 rounded-lg flex flex-col justify-between h-32 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                                 <div className="flex items-center gap-2 text-slate-500">
                                     <TrendingUp className="w-4 h-4" />
                                     <h3 className="text-xs font-semibold uppercase tracking-wider">Avg Breakout Prob</h3>
@@ -82,7 +82,7 @@ export default function Dashboard() {
                                 <p className="text-3xl font-bold text-slate-900">{marketOverview.avgIndieBreakout}%</p>
                             </div>
 
-                            <div className="glass-card p-5 rounded-lg flex flex-col justify-between h-32">
+                            <div className="glass-card p-5 rounded-lg flex flex-col justify-between h-32 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                                 <div className="flex items-center gap-2 text-slate-500">
                                     <AlertCircle className="w-4 h-4" />
                                     <h3 className="text-xs font-semibold uppercase tracking-wider">Avg Decay</h3>
@@ -91,8 +91,8 @@ export default function Dashboard() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div className="glass-card rounded-lg p-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in-up-delay-1">
+                            <div className="glass-card rounded-lg p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                                 <div className="flex items-center justify-between mb-4">
                                     <h3 className="font-semibold text-base text-slate-900 flex items-center gap-2">
                                         <ArrowRight className="w-4 h-4 text-green-600" />
@@ -102,7 +102,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="divide-y divide-slate-100">
                                     {indies.sort((a: any, b: any) => b.saturationScore - a.saturationScore).slice(0, 5).map((indie: any, i: number) => (
-                                        <div key={indie.id} className="flex justify-between items-center py-3">
+                                        <div key={indie.id} className="flex justify-between items-center py-3 hover:bg-slate-50 px-2 -mx-2 rounded-md transition-colors cursor-default">
                                             <div className="flex items-center gap-3">
                                                 <div className="text-xs font-medium text-slate-400 w-4">{i + 1}.</div>
                                                 <div>
@@ -119,7 +119,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
 
-                            <div className="glass-card rounded-lg p-6">
+                            <div className="glass-card rounded-lg p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                                 <div className="flex items-center justify-between mb-4">
                                     <h3 className="font-semibold text-base text-slate-900 flex items-center gap-2">
                                         <AlertCircle className="w-4 h-4 text-red-600" />
@@ -129,7 +129,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="divide-y divide-slate-100">
                                     {blockbusters.sort((a: any, b: any) => b.currentKpi.box_office_decay - a.currentKpi.box_office_decay).slice(0, 5).map((bb: any, i: number) => (
-                                        <div key={bb.id} className="flex justify-between items-center py-3">
+                                        <div key={bb.id} className="flex justify-between items-center py-3 hover:bg-slate-50 px-2 -mx-2 rounded-md transition-colors cursor-default">
                                             <div className="flex gap-3 items-center">
                                                 <div className="text-xs font-medium text-slate-400 w-4">{i + 1}.</div>
                                                 <div>
@@ -150,9 +150,9 @@ export default function Dashboard() {
                 )}
 
                 {currentTab === 'swaps' && (
-                    <div className="space-y-6">
+                    <div className="space-y-6 animate-fade-in-up">
                         {swaps.map((swap: any, idx: number) => (
-                            <div key={idx} className="glass-card rounded-lg overflow-hidden">
+                            <div key={idx} className="glass-card rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
                                 <div className="bg-slate-50 border-b border-slate-200 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
                                     <div className="flex items-center gap-4">
                                         <div className="w-10 h-10 rounded-md bg-white border border-slate-200 flex items-center justify-center text-slate-700 font-bold text-lg shrink-0">
@@ -229,8 +229,8 @@ export default function Dashboard() {
                 )}
 
                 {currentTab === 'social' && (
-                    <div>
-                        <div className="glass-card rounded-lg overflow-hidden overflow-x-auto">
+                    <div className="animate-fade-in-up">
+                        <div className="glass-card rounded-lg overflow-hidden overflow-x-auto hover:shadow-md transition-shadow duration-300">
                             <table className="w-full text-left text-sm text-slate-600 min-w-[800px]">
                                 <thead className="bg-slate-50 text-slate-500 text-xs font-semibold border-b border-slate-200">
                                     <tr>
@@ -283,8 +283,8 @@ export default function Dashboard() {
                 )}
 
                 {currentTab === 'about' && (
-                    <div className="max-w-4xl">
-                        <div className="glass-card rounded-lg p-8 mb-8">
+                    <div className="max-w-4xl animate-fade-in-up">
+                        <div className="glass-card rounded-lg p-8 mb-8 hover:shadow-md transition-shadow duration-300">
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">
                                 Welcome to the Film ROI Predictor!
                             </h3>

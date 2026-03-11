@@ -69,7 +69,7 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileMenuOpen, s
             <div className="p-4 border-t border-slate-200">
                 <div className="bg-slate-50 rounded-md p-3 border border-slate-200">
                     <div className="flex items-center gap-2 mb-1">
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-[pulseSlow_3s_ease-in-out_infinite]"></div>
                         <span className="text-[11px] font-semibold text-slate-700 uppercase tracking-wide">System Status</span>
                     </div>
                     <p className="text-[11px] text-slate-500 leading-snug">Live API Connected.<br/>Processing 50+ properties.</p>
